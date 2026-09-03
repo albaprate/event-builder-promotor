@@ -23,7 +23,7 @@
 /*
  * Baila.fm design system — dark ticketing UI.
  * Headings: PP Nikkei Journal. Body: Inter.
- * Accent: hot pink CTA. Everything else near-black + white.
+ * Accent: brand violet CTA. Everything else near-black + white.
  */
 
 @theme inline {
@@ -68,9 +68,9 @@
   --card-foreground: oklch(1 0 0);
   --popover: oklch(0.12 0 0);
   --popover-foreground: oklch(1 0 0);
-  --primary: #ff0091;
-  --primary-foreground: #000000;
-  --ring: #ff0091;
+  --primary: #7637e5;
+  --primary-foreground: #ffffff;
+  --ring: #7637e5;
   --secondary: oklch(0.2 0 0);
   --secondary-foreground: oklch(1 0 0);
   --muted: oklch(0.18 0 0);

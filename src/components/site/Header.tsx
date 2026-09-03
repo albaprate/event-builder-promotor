@@ -8,7 +8,7 @@ export function Header() {
       <button aria-label="Menú" className="text-foreground lg:hidden">
         <AlignLeft className="size-7" strokeWidth={1.5} />
       </button>
-      <Link to="/rigoberta-bandini-maria-jaume" className="flex items-center">
+      <Link to="/eventos" className="flex items-center">
         <img src={IMAGES.logo} alt="Baila.fm" width={800} height={155} className="h-6 w-auto lg:h-7" />
       </Link>
       <div className="hidden flex-1 items-center gap-2 rounded-full border border-border px-4 py-2.5 lg:flex lg:max-w-md">

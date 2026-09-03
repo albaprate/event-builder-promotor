@@ -1,37 +1,47 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Plus } from "lucide-react";
+
+import { EventListCard } from "@/components/promoter/EventListCard";
 import { PromoterHeader } from "@/components/site/PromoterHeader";
+import { listPromoterEvents } from "@/lib/promoter-events";
 
 export const Route = createFileRoute("/eventos/")({
   component: EventosPage,
 });
 
 const ctaClass =
-  "inline-flex items-center justify-center gap-2 bg-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90";
+  "inline-flex items-center justify-center gap-2 rounded-none bg-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90";
 
 function EventosPage() {
+  const events = listPromoterEvents();
+
   return (
     <div className="min-h-screen">
       <PromoterHeader />
       <main className="mx-auto max-w-5xl px-5 py-8 lg:px-8 lg:py-12">
-        <div className="flex flex-wrap items-end justify-between gap-4">
+        <div className="space-y-4">
           <div>
             <h1 className="heading-xl text-3xl lg:text-4xl">Tus eventos</h1>
             <p className="mt-2 text-muted-foreground">
               Crea y gestiona eventos, entradas y extras desde aquí.
             </p>
           </div>
-          <Link to="/eventos/nuevo" className={ctaClass}>
+          {/* Fuera del alcance del MVP: crear evento */}
+          {/* <Link to="/eventos/nuevo" className={ctaClass}> */}
+          <button type="button" className={ctaClass}>
             <Plus className="size-5" strokeWidth={2} />
             Nuevo evento
-          </Link>
+          </button>
+          {/* </Link> */}
         </div>
 
-        <section className="mt-10 border border-[#525252] p-5">
-          <p className="font-semibold text-white">Rigoberta Bandini + Maria Jaume</p>
-          <p className="mt-1 text-sm text-muted-foreground">Guíxols Arena · 12 jul 2026</p>
-          <p className="mt-3 text-sm text-muted-foreground">Borrador · 0 entradas vendidas</p>
-        </section>
+        <ul className="mt-10 space-y-3">
+          {events.map((event) => (
+            <li key={event.id}>
+              <EventListCard event={event} />
+            </li>
+          ))}
+        </ul>
       </main>
     </div>
   );

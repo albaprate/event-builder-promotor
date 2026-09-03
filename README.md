@@ -16,7 +16,9 @@ npm i
 npm run dev
 ```
 
-Abre `http://localhost:8080/` → redirige a `/eventos`.
+Abre `http://localhost:8081/` → redirige a `/eventos`.
+
+> El proyecto fan (`event-builder-plus`) usa el puerto **8080** por defecto; este promotor usa **8081** para poder tener ambos abiertos a la vez.
 
 ## Repo
 

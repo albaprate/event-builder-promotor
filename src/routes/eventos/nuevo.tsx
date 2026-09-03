@@ -35,7 +35,7 @@ function NuevoEventoPage() {
               className="mt-2 w-full border border-input bg-background px-3 py-3 text-base text-foreground placeholder:text-muted-foreground/60 focus:border-border-strong focus:outline-none"
             />
           </label>
-          <button type="button" className="w-full bg-primary py-3 text-base font-semibold text-primary-foreground">
+          <button type="button" className="w-full rounded-none bg-primary py-3 text-base font-semibold text-primary-foreground">
             Guardar borrador
           </button>
         </form>
