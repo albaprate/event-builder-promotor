@@ -27,7 +27,7 @@ export const PROMOTER_EVENTS: Record<string, PromoterEvent> = {
     status: "draft",
     ticketsSold: 0,
     hero: IMAGES.hero,
-    fanUrl: "http://localhost:8080/rigoberta-bandini-maria-jaume",
+    fanUrl: "https://event-builder-plus.vercel.app/rigoberta-bandini-maria-jaume",
   },
   "premier-padel-finals-2026": {
     id: "premier-padel-finals-2026",
